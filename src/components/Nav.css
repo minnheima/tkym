@@ -1,0 +1,51 @@
+.navi-list {
+  position: fixed;
+  width: 60%;
+  max-width: 810px;
+  top: 2rem;
+  left: 50%;
+  translate: -50%;
+  z-index: 20;
+  opacity: 1;
+}
+.navi-list ul {
+  display: flex;
+  justify-content: space-between;
+}
+.navi-list li {
+  margin-right: 10px;
+}
+.navi-list li a {
+  padding: 8px 10px;
+  line-height: 25px;
+  border-radius: 25px;
+  justify-content: space-between;
+  border: 2px solid transparent;
+  transition: all 0.1s ease-out;
+}
+
+.navi-list li a:hover {
+  background-color: #fff188;
+}
+.navi-list li a.active {
+  border: 2px solid black;
+}
+
+.navi-list img {
+  width: 15px;
+}
+
+/* Tablet (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Mobile (0 ~ 767px) */
+@media screen and (max-width: 767px) {
+  .navi-list {
+    width: 90%;
+    max-width: 375px;
+  }
+  .navi-list li {
+    margin-right: 0px;
+  }
+}

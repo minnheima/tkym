@@ -1,0 +1,183 @@
+/*전체 화면*/
+
+.wrapper h2 {
+  padding: 9% 0 7% 0;
+}
+/*fic or art list 들어갈 자리*/
+.content-wrapper {
+  width: 810px;
+  max-width: 810px;
+  background-color: rgba(255, 255, 255, 0.647);
+  padding: 50px 20px;
+  margin: 0 auto;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  font-family: var(---font-ko-default);
+}
+
+.content-list img {
+  max-width: 200px;
+}
+
+.content-info {
+  display: flex;
+  font-family: var(---font-ko-default);
+  height: 40px;
+  padding: 0 10px;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+
+#rating {
+  font-size: 11px;
+  line-height: 1.5rem;
+  width: 20px;
+  display: inline;
+  margin-left: 5px;
+  color: rgb(238, 49, 49);
+}
+#fic-list li:first-child {
+  border-top: 1px solid black;
+}
+#fic-list li {
+  font-family: var(---font-ko-default);
+  transition: all 0.2s ease-out;
+  background-color: transparent;
+}
+#fic-list li:hover {
+  background-color: rgba(252, 240, 196, 0.83);
+}
+
+/* img 같은 요소 예외적으로 배치할 때 사용 */
+#art-list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#art-list li {
+  width: 33%;
+  min-height: 300px;
+  transition: all 0.2s ease-out;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.art-title {
+  width: 60%;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#art-list li:hover {
+  filter: drop-shadow(10px 10px 15px rgba(88, 88, 88, 0.243));
+}
+#art-list img {
+  width: 200px;
+  transition: all 0.2s ease-out;
+}
+#art-list li:hover img {
+  transform: scale(1.05);
+}
+.guest-wrap {
+  width: 810px;
+  max-width: 810px;
+}
+.guest {
+  font-family: var(---font-en-primary);
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+/* After page */
+.order-btn {
+  width: 100px;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  border-radius: 0;
+  border: 1px solid black;
+}
+#after-list li {
+  margin-bottom: 30px;
+  line-height: 40px;
+  font-weight: 500;
+  border-top: 1px solid rgb(46, 46, 46);
+  border-bottom: 1px solid rgb(46, 46, 46);
+  box-sizing: border-box;
+}
+
+#after-list li:hover {
+  background-color: #fff188;
+}
+
+#after-list li.active {
+  background-color: #fff188;
+}
+
+.after-text {
+  font-weight: 400;
+  border-top: 1px dashed black;
+}
+.after-content {
+  padding: 30px;
+  word-break: break-all;
+  line-height: 30px;
+}
+
+/* Tablet (768px ~ 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .wrapper h2 {
+    padding: 12% 0 9% 0;
+  }
+
+  .content-wrapper {
+    width: 90%;
+    justify-content: center;
+  }
+}
+
+/* Mobile (0 ~ 767px) */
+@media screen and (max-width: 767px) {
+  .wrapper h2 {
+    padding: 24% 0 6% 0;
+  }
+
+  .content-wrapper {
+    max-width: 375px;
+  }
+  .content-info #title {
+    width: 75%;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  #art-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  #art-list li {
+    width: 100%;
+  }
+  .art-title {
+    width: 100%;
+  }
+  .guest-wrap {
+    max-width: 335px;
+  }
+}

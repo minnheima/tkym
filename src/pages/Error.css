@@ -1,0 +1,29 @@
+.error-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.error-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.warn-icon {
+  display: flex;
+  justify-self: center;
+  width: 46px;
+  height: 46px;
+  background: url(../assets/warning.svg) no-repeat;
+  background-size: contain;
+  margin-bottom: 10px;
+}
